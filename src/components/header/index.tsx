@@ -6,19 +6,35 @@ import { useTheme } from '../../contexts/ThemeContext';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setIsOpen(false);
+    }
+  };
   
   return (
-    <header className='bg-white shadow-md dark:bg-gray-800 transition-colors'>
+    <header className='fixed top-0 left-0 right-0 z-50 bg-white shadow-md dark:bg-gray-800 transition-colors'>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <a href="/" className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             seojoon1
           </a>
 
           <div className="hidden md:flex space-x-8 text-gray-600 font-medium dark:text-gray-300">
-            <a href="#" className="hover:text-mint-500 transition-colors">who?</a>
-            <a href="#" className="hover:text-abigail-500 transition-colors">about</a>
-            <a href="#" className="hover:text-blue-600 transition-colors">contact</a>
+            <button onClick={() => scrollToSection('about')} className="hover:text-mint-500 transition-colors">About</button>
+            <button onClick={() => scrollToSection('skills')} className="hover:text-abigail-500 transition-colors">Skills</button>
+            <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition-colors">Projects</button>
+            <button onClick={() => scrollToSection('contact')} className="hover:text-indigo-600 transition-colors">Contact</button>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -52,9 +68,10 @@ export default function Header() {
               className="md:hidden overflow-hidden"
             >
               <div className="mt-4 pb-4 flex flex-col space-y-4 border-t border-gray-100 dark:border-gray-700 pt-4">
-                <a href="#" className="hover:text-mint-500 transition-colors text-gray-600 dark:text-gray-300 font-medium">who?</a>
-                <a href="#" className="hover:text-abigail-500 transition-colors text-gray-600 dark:text-gray-300 font-medium">about</a>
-                <a href="#" className="hover:text-blue-600 transition-colors text-gray-600 dark:text-gray-300 font-medium">contact</a>
+                <button onClick={() => scrollToSection('about')} className="hover:text-mint-500 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">About</button>
+                <button onClick={() => scrollToSection('skills')} className="hover:text-abigail-500 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Skills</button>
+                <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Projects</button>
+                <button onClick={() => scrollToSection('contact')} className="hover:text-indigo-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Contact</button>
               </div>
             </motion.div>
           )}
