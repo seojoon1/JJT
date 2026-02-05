@@ -51,7 +51,9 @@ export default function Contact() {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:kim1122aass@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all"
             >
               이메일 보내기

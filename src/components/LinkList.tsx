@@ -1,3 +1,6 @@
+import asciiiImage from '../assets/asciii.png';
+import mococobotImage from '../assets/mococobot.png';
+import kola from '../assets/kola.png';
 export const projects = [
   {
     title: '모코코봇',
@@ -5,7 +8,7 @@ export const projects = [
     tags: ['React', 'JavaScript'],
     github: '#',
     demo: 'https://mococobot.kr',
-    image: 'https://via.placeholder.com/400x300',
+    image: mococobotImage,
   },
   {
     title: 'asciiii',
@@ -13,21 +16,21 @@ export const projects = [
     tags: ['React', 'TypeScript', 'tailwindcss'],
     github: '#',
     demo: '#',
-    image: 'https://via.placeholder.com/400x300',
+    image: asciiiImage,
   },
   {
-    title: '프로젝트 3',
-    description: '프로젝트에 대한 간단한 설명을 작성하세요. 어떤 기술을 사용했고, 어떤 문제를 해결했는지 설명합니다.',
-    tags: ['Vue', 'Firebase', 'CSS'],
-    github: '#',
+    title: 'KOLA',
+    description: 'KOLA 는 라오스 국립 대학교 학생들과의 협업으로 만들어진 플러팅 멘트 소셜 서비스 입니다.',
+    tags: ['React', 'TypeScript', 'tailwindcss'],
+    github: 'https://github.com/seojoon1/MT',
     demo: '#',
-    image: 'https://via.placeholder.com/400x300',
+    image: kola,
   },
 ];
 import { Mail, Github, Linkedin, Instagram} from 'lucide-react';
 export const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:your.email@example.com', color: 'hover:text-red-500' },
-    { icon: Github, label: 'GitHub', href: 'https://github.com/yourusername', color: 'hover:text-gray-900 dark:hover:text-white' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', color: 'hover:text-blue-600' },
-    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/yourusername', color: 'hover:text-pink-500' },
+    { icon: Mail, label: 'Email', href: 'mailto:kim1122aass@gmail.com', color: 'hover:text-red-500 dark:text-red-300' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/seojoon1', color: 'hover:text-gray-900 dark:hover:text-white' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/seojoon1', color: 'hover:text-blue-600 dark:text-blue-300' },
+    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/seojoon_12_6', color: 'hover:text-pink-500 dark:text-pink-300' },
   ];
