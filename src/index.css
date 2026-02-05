@@ -3,3 +3,4 @@
   --color-mint-500: #55b395;
   --color-abigail-500: #9ea4d3;
 }
+@variant dark (&:where(.dark, .dark *));
