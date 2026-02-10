@@ -26,7 +26,7 @@ export default function Header() {
   };
   
   return (
-    <header className='fixed top-0 left-0 right-0 z-50 bg-white shadow-md dark:bg-gray-800 transition-colors'>
+    <header className='fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-lg border-b border-gray-200/50 dark:border-gray-700/50 transition-all'>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <a href="/" className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">

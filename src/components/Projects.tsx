@@ -1,13 +1,17 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Github, ExternalLink } from 'lucide-react';
-import {projects} from './LinkList';
+import { Github, ExternalLink, ArrowRight } from 'lucide-react';
+import { projects } from '../data/projectsData';
+import { Link } from 'react-router';
 
 
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  
+  // Home 페이지에서는 최대 3개만 표시
+  const displayProjects = projects.slice(0, 3);
 
   return (
     <section id="projects" ref={ref} className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors">
@@ -22,7 +26,7 @@ export default function Projects() {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {displayProjects.map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -79,6 +83,23 @@ export default function Projects() {
               </motion.div>
             ))}
           </div>
+          
+          {projects.length > 3 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="mt-12 text-center"
+            >
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                <span>모든 프로젝트 보기</span>
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>
