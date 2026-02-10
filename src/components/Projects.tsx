@@ -66,13 +66,14 @@ export default function Projects() {
                       <Github className="h-5 w-5" />
                       <span className="text-sm font-medium">Code</span>
                     </a>
+                    {project.demo === '' ? null :
                     <a
                       href={project.demo}
                       className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       <ExternalLink className="h-5 w-5" />
                       <span className="text-sm font-medium">Link</span>
-                    </a>
+                    </a>}
                   </div>
                 </div>
               </motion.div>

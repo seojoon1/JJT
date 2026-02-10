@@ -15,7 +15,7 @@ export const projects = [
     description: '이미지를 넣으면 ASCII 아트로 변환해주는 웹프로젝트입니다. 다양한 옵션을 제공합니다.',
     tags: ['React', 'TypeScript', 'tailwindcss'],
     github: '#',
-    demo: '#',
+    demo: '',
     image: asciiiImage,
   },
   {
@@ -23,7 +23,7 @@ export const projects = [
     description: 'KOLA 는 라오스 국립 대학교 학생들과의 협업으로 만들어진 플러팅 멘트 소셜 서비스 입니다.',
     tags: ['React', 'TypeScript', 'tailwindcss'],
     github: 'https://github.com/seojoon1/MT',
-    demo: '#',
+    demo: '',
     image: kola,
   },
 ];
