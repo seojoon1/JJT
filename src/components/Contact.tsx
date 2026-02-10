@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { socialLinks } from './LinkList';
+import { socialLinks } from '../data/socialLinksData';
 
 export default function Contact() {
   const ref = useRef(null);

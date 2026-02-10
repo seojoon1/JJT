@@ -1,6 +1,7 @@
 import asciiiImage from '../assets/asciii.png';
 import mococobotImage from '../assets/mococobot.png';
 import kola from '../assets/kola.png';
+
 export const projects = [
   {
     title: '모코코봇',
@@ -26,11 +27,12 @@ export const projects = [
     demo: '',
     image: kola,
   },
+  {
+    title: '신한대 멋사 페이지',
+    description: '신한대학교 멋쟁이사자처럼 대학 공식 페이지 입니다.',
+    tags: ['React', 'TypeScript', 'tailwindcss'],
+    github: 'https://github.com/Dev-MAMOKEY/MAMOKEYPAGE',
+    demo: '',
+    image: kola,
+  },
 ];
-import { Mail, Github, Linkedin, Instagram} from 'lucide-react';
-export const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:kim1122aass@gmail.com', color: 'hover:text-red-500 dark:text-red-300' },
-    { icon: Github, label: 'GitHub', href: 'https://github.com/seojoon1', color: 'hover:text-gray-900 dark:hover:text-white' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/seojoon1', color: 'hover:text-blue-600 dark:text-blue-300' },
-    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/seojoon_12_6', color: 'hover:text-pink-500 dark:text-pink-300' },
-  ];
