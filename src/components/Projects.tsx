@@ -14,7 +14,7 @@ export default function Projects() {
   const displayProjects = projects.slice(0, 3);
 
   return (
-    <section id="projects" ref={ref} className="min-h-screen flex items-center py-20 px-6 bg-white dark:bg-gray-900 transition-colors">
+    <section id="projects" ref={ref} className="min-h-screen flex items-center py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
