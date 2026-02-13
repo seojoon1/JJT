@@ -35,6 +35,7 @@ export default function Header() {
 
           <div className="hidden md:flex space-x-8 text-gray-600 font-medium dark:text-gray-300">
             <button onClick={() => scrollToSection('about')} className="hover:text-mint-500 transition-colors">About</button>
+            <button onClick={() => scrollToSection('github')} className="hover:text-purple-600 transition-colors">GitHub</button>
             <button onClick={() => scrollToSection('skills')} className="hover:text-abigail-500 transition-colors">Skills</button>
             <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition-colors">Projects</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-indigo-600 transition-colors">Contact</button>
@@ -72,6 +73,7 @@ export default function Header() {
             >
               <div className="mt-4 pb-4 flex flex-col space-y-4 border-t border-gray-100 dark:border-gray-700 pt-4">
                 <button onClick={() => scrollToSection('about')} className="hover:text-mint-500 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">About</button>
+                <button onClick={() => scrollToSection('github')} className="hover:text-purple-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">GitHub</button>
                 <button onClick={() => scrollToSection('skills')} className="hover:text-abigail-500 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Skills</button>
                 <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Projects</button>
                 <button onClick={() => scrollToSection('contact')} className="hover:text-indigo-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Contact</button>
