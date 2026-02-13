@@ -9,7 +9,7 @@ export default function Contact() {
 
 
   return (
-    <section id="contact" ref={ref} className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors">
+    <section id="contact" ref={ref} className="min-h-screen flex items-center py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

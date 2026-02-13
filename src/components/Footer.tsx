@@ -34,6 +34,9 @@ export default function Footer() {
           {/* 저작권 */}
           <div className="text-gray-600 dark:text-gray-400 text-sm">
             © {currentYear} seojoon1. All rights reserved.
+            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="ml-2 text-blue-600 dark:text-blue-400 hover:underline">
+              Back to top
+            </button>
           </div>
         </div>
       </div>
