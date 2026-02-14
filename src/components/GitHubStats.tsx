@@ -79,7 +79,7 @@ export default function GitHubStats() {
             >
               <div className="flex justify-center">
                 <img
-                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=${isDark ? 'dark' : 'light'}&hide_border=true&background=${isDark ? '1F2937' : 'FFFFFF'}&stroke=${isDark ? '4B5563' : 'E5E7EB'}&ring=${isDark ? '60A5FA' : '2563EB'}&fire=${isDark ? 'F87171' : 'EF4444'}&currStreakLabel=${isDark ? 'D1D5DB' : '4B5563'}`}
+                  src={`https://streak-stats.demolab.com/?user=${username}&theme=${isDark ? 'dark' : 'default'}&hide_border=true&background=00000000&ring=${isDark ? '60A5FA' : '2563EB'}&fire=${isDark ? 'F87171' : 'EF4444'}&currStreakLabel=${isDark ? 'D1D5DB' : '4B5563'}&sideNums=${isDark ? 'E2E8F0' : '4B5563'}&sideLabels=${isDark ? 'D1D5DB' : '4B5563'}`}
                   alt="GitHub Streak"
                   className="max-w-full h-auto rounded"
                 />
