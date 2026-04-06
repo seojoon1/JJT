@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
+import { useNavigate } from 'react-router';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
@@ -39,6 +41,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('skills')} className="hover:text-abigail-500 transition-colors">Skills</button>
             <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition-colors">Projects</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-indigo-600 transition-colors">Contact</button>
+            <button onClick={() => navigate('/tm')} className="hover:text-orange-600 transition-colors">Tournament</button>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -77,6 +80,7 @@ export default function Header() {
                 <button onClick={() => scrollToSection('skills')} className="hover:text-abigail-500 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Skills</button>
                 <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Projects</button>
                 <button onClick={() => scrollToSection('contact')} className="hover:text-indigo-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Contact</button>
+                <button onClick={() => { setIsOpen(false); navigate('/tm'); }} className="hover:text-orange-600 transition-colors text-gray-600 dark:text-gray-300 font-medium text-left">Tournament</button>
               </div>
             </motion.div>
           )}
